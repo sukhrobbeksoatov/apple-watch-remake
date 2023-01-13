@@ -1,0 +1,27 @@
+/* HERO */
+.hero {
+  padding: 140px 0 185px;
+  background: url("../images/intro-bg.jpg") no-repeat;
+  background-position: left calc(50% + 550px) bottom;
+  border-bottom: 2px solid #ddd;
+}
+
+/* LEAD CTA */
+.lead-cta {
+  max-width: 490px;
+}
+
+.lead-cta__title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.lead-cta__text {
+  padding-left: 37px;
+  color: #777;
+  border-left: 3px solid #888;
+  margin-bottom: 30px;
+}

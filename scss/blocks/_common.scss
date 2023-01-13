@@ -1,8 +1,9 @@
 /* GLOBAL */
 :root {
   --primary-bg-color: #fff;
-  --text-color: #000;
-  --main-font-family: "Arial", sans-serif;
+  --text-color: #333;
+  --accent-color: #ea625c;
+  --accent-dark: #c9514c;
 }
 
 html {
@@ -18,13 +19,14 @@ html {
   text-decoration: none;
 }
 
-*, *::before,
+*,
+*::before,
 *::after {
   box-sizing: inherit;
 }
 
 *:focus {
-  outline: 2px dashed black;
+  outline: 2px dashed var(--accent-color);
   outline-offset: 3px;
 }
 
@@ -36,7 +38,8 @@ img {
 
 body {
   height: 100%;
-  font-family: var(--main-font-family);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
@@ -50,13 +53,9 @@ body {
   width: 100%;
   max-width: $desktop;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
-/* MAIN CONTENT */
-.main-content {
-  flex-grow: 1;
-}
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
@@ -97,11 +96,42 @@ body {
   overflow: hidden;
 }
 
+/* BUTTON */
+.button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 12px 38px;
+  text-align: center;
+  min-width: 260px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  transition: background-color .4s ease,
+    opacity .4s ease;
+
+  &:hover {
+    background-color: var(--accent-dark), ;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+
 /* RETINA BGS */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (min--moz-device-pixel-ratio: 2),
-  only screen and (-o-min-device-pixel-ratio: 2/1),
-  only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
-  only screen and (min-resolution: 2dppx) {
-}
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
