@@ -127,6 +127,34 @@ body {
   flex-grow: 1;
 }
 
+/* LEAD CTA */
+.lead-cta {
+  max-width: 490px;
+
+  &--white .lead-cta__title {
+    color: #fff;
+  }
+
+  &--white .lead-cta__text {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+.lead-cta__title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.lead-cta__text {
+  padding-left: 37px;
+  color: #777;
+  border-left: 3px solid #888;
+  margin-bottom: 30px;
+}
 
 /* RETINA BGS */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
